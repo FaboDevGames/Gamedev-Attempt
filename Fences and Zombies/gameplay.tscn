@@ -21,15 +21,15 @@ albedo_color = Color( 0.121569, 0.141176, 1, 1 )
 
 [node name="Spatial" type="Spatial"]
 
-[node name="RigidBody" type="StaticBody" parent="."]
+[node name="StaticBody" type="StaticBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
 physics_material_override = SubResource( 1 )
 
-[node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
 transform = Transform( 25, 0, 0, 0, 1, 0, 0, 0, 25, 0, 0, 0 )
 shape = SubResource( 5 )
 
-[node name="CSGBox" type="CSGBox" parent="RigidBody"]
+[node name="CSGBox" type="CSGBox" parent="StaticBody"]
 transform = Transform( 25, 0, 0, 0, 1, 0, 0, 0, 25, 0, 0, 0 )
 material = SubResource( 2 )
 
@@ -42,7 +42,7 @@ radius = 1.83679
 material = SubResource( 4 )
 
 [node name="Camera" type="Camera" parent="KinematicBody/CSGSphere"]
-transform = Transform( 1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 1.5, 0 )
+transform = Transform( 1, 0, 0, 0, 0.492404, 0.173648, 0, -0.086824, 0.984808, 0, 1.5, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="KinematicBody"]
 transform = Transform( 1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 4, 0 )
